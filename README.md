@@ -1,7 +1,7 @@
 # MernDelight - Recipe App 👨‍💻 
 
 ## Client
-The client application is hosted at [Link]((https://client-mern-delight.vercel.app/)).
+The client application is hosted at [Link](https://client-mern-delight.vercel.app/).
 
 ## Server API
 The server API can be accessed at [Link](https://server-mern-delight.vercel.app/).
