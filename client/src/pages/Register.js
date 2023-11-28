@@ -17,7 +17,7 @@ const Register = () => {
     setSuccess(null);
 
     try {
-      const response = await axios.post('http://localhost:7000/api/v1/signup', {
+      const response = await axios.post('https://server-mern-delight.vercel.app/api/v1/signup', {
         name,
         email,
         password,

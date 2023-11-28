@@ -24,7 +24,7 @@ const app=express();
 //to allow cross origin requests
 app.use(
     cors({
-      origin: ["http://localhost:7000", "http://localhost:3000", 'https://recipe-app-server-five.vercel.app', "https://recipe-server-kidx.onrender.com"],
+      origin: ["http://localhost:7000", "http://localhost:3000", 'https://server-mern-delight.vercel.app/', "https://client-mern-delight.vercel.app/"],
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
       credentials: true,
     })

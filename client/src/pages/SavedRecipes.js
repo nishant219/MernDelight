@@ -7,7 +7,7 @@ const SavedRecipes = () => {
 
   useEffect(() => {
     // Fetch the user's saved recipes from the server
-    axios.get(`http://localhost:7000/api/v1/${userId}`)
+    axios.get(`https://server-mern-delight.vercel.app/api/v1/${userId}`)
       .then((response) => {
         setSavedRecipes(response.data.savedRecipes);
       })

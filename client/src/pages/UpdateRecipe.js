@@ -28,7 +28,7 @@ const UpdateRecipe = ({ recipe }) => {
   //   // Fetch the recipe details based on the provided recipeId
   //   const fetchRecipeDetails = async () => {
   //     try {
-  //       const response = await axios.get(`http://localhost:7000/api/v1/${recipe._id}`, {
+  //       const response = await axios.get(`https://server-mern-delight.vercel.app/api/v1/${recipe._id}`, {
   //         headers: {
   //           Authorization: `Bearer ${user.token}`,
   //         },
@@ -57,7 +57,7 @@ const UpdateRecipe = ({ recipe }) => {
     e.preventDefault();
     try {
       const response = await axios.put(
-        `http://localhost:7000/api/v1/update/${recipe._id}`,
+        `https://server-mern-delight.vercel.app/api/v1/update/${recipe._id}`,
         formData,
         {
           headers: {

@@ -18,7 +18,7 @@ const RecipeListing = () => {
 
   const fetchRecipes = async () => {
     try {
-      const response = await axios.get('http://localhost:7000/api/v1/all', {
+      const response = await axios.get('https://server-mern-delight.vercel.app/api/v1/all', {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
@@ -44,7 +44,7 @@ const RecipeListing = () => {
   const handleSave = async (recipeId) => {
     try {
       const response = await axios.post(
-        `http://localhost:7000/api/v1/save/${recipeId}`,
+        `https://server-mern-delight.vercel.app/api/v1/save/${recipeId}`,
         {},
         {
           headers: {
@@ -71,7 +71,7 @@ const RecipeListing = () => {
 
   const handleDelete = async (recipeId) => {
     try {
-      const response = await axios.delete(`http://localhost:7000/api/v1/delete/${recipeId}`, {
+      const response = await axios.delete(`https://server-mern-delight.vercel.app/api/v1/delete/${recipeId}`, {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
