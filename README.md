@@ -1,10 +1,10 @@
 # MernDelight - Recipe App 👨‍💻 
 
 ## Client
-The client application is hosted at [Link](https://client-reunion.vercel.app/).
+The client application is hosted at [Link](https://client-mern-delight.vercel.app/).
 
 ## Server API
-The server API can be accessed at [Link](https://backend-reunion.vercel.app/api/list-properties).
+The server API can be accessed at [Link](https://server-mern-delight.vercel.app/).
 
 This is a recipe application built with the MERN stack (MongoDB, Express.js, React.js, and Node.js). It allows users to sign up, log in, log out and perform CRUD operations on recipes. The project consists of two controllers: the user controller for authentication and the recipe controller.
 
