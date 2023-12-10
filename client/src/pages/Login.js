@@ -44,7 +44,7 @@ const Login = () => {
       }
     } catch (error) {
       console.error('Error occurred:', error);
-      setError("Error while login user");
+      setError(error.response.data.message);
     }
   };
 
@@ -55,6 +55,10 @@ const Login = () => {
   return (
     <div className="max-w-[400px] m-auto p-4 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
+      
+      {error && <div className="text-red-500 mb-4">{error}</div>}
+      {success && <div className="text-green-500 mb-4">{success}</div>}
+
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block mb-2" htmlFor="email">

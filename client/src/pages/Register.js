@@ -36,7 +36,7 @@ const Register = () => {
       }
     } catch (error) {
       console.error('Error occurred:', error);
-      setError("Error while onboarding user");
+      setError(error.response.data.message);
     }
   };
 
@@ -49,6 +49,13 @@ const Register = () => {
   return (
     <div className="max-w-[400px] m-auto p-4 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4 text-center">Register</h2>
+      
+      {error && <div className="text-red-500 mb-4">{error}</div>}
+      {success && <div className="text-green-500 mb-4">{success}</div>}
+
+      <BsFillPersonFill className="text-6xl m-auto" />
+      <p className="text-center mb-4">Create an account to continue</p>
+
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block mb-2" htmlFor="name">
