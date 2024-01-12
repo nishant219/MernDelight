@@ -22,6 +22,7 @@ const RecipeListing = () => {
         headers: {
           Authorization: `Bearer ${authToken}`,
         },
+
       });
 
       const data = await response.data;
@@ -50,6 +51,7 @@ const RecipeListing = () => {
           headers: {
             Authorization: `Bearer ${authToken}`,
           },
+          
         }
       );
 

@@ -24,7 +24,8 @@ const Register = () => {
       },{
         headers: {
           'Content-Type': 'application/json',
-        }
+        },
+        withCredentials: true,
       });
 
       if (response.status === 200) {

@@ -62,6 +62,7 @@ const CreateRecipe = () => {
             Authorization: `Bearer ${authToken}`,
             'Content-Type': 'application/json',
           },
+          withCredentials: true,
         }
       );
 

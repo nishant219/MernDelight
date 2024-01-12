@@ -27,6 +27,7 @@ app.use(
       origin: ["http://localhost:7000", "http://localhost:3000", 'https://server-mern-delight.vercel.app/', "https://client-mern-delight.vercel.app/"],
       methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
       credentials: true,
+      exposedHeaders: ['set-cookie'],
     })
   );
 app.use(express.json()); // Parse JSON bodies for API endpoints

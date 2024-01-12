@@ -37,6 +37,7 @@ const UpdateRecipe = ({ recipe }) => {
             Authorization: `Bearer ${authToken}`,
             'Content-Type': 'application/json',
           },
+          withCredentials: true,
         }
       );
 
