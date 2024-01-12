@@ -29,14 +29,14 @@ const Register = () => {
 
       if (response.status === 200) {
         setIsRegistered(true);
-        setSuccess('Registration successful!'); 
+        setSuccess( 'Registration successful!' ); 
         console.log('Registered successfully');
       } else {
         console.log('Registration failed');
       }
     } catch (error) {
       console.error('Error occurred:', error);
-      setError(error.response.data.message);
+      setError(error.response.data.message || 'Registration failed');
     }
   };
 

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import axios from 'axios';
 import { BsFillPersonFill } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
 const Login = () => {
@@ -19,33 +18,40 @@ const Login = () => {
     setSuccess(null);
 
     try {
-      const response = await axios.post('https://server-mern-delight.vercel.app/api/v1/login', {
-        email,
-        password,
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
+      const response = await axios.post(
+        'https://server-mern-delight.vercel.app/api/v1/login',
+        {
+          email,
+          password,
         },
-      });
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
 
       if (response.status === 200) {
         setIsLoggedIn(true);
-        const data=await response.data;
+        const data = await response.data;
         login({
           user: data.user,
-          token: data.token
+          token: data.token,
         });
-        setSuccess("login Done");
-        // <Navigate to="/" />
+        setSuccess('Login Done');
+        // Clear input fields
+        setEmail('');
+        setPassword('');
         console.log('Logged in successfully');
       } else {
         console.log('Login failed');
       }
-    } catch (error) {
+    } 
+    catch (error) {
       console.error('Error occurred:', error);
-      setError(error.response.data.message);
+      setError(error.response.data.message || 'Login failed');
     }
+    
   };
 
   if (isLoggedIn) {
@@ -55,7 +61,7 @@ const Login = () => {
   return (
     <div className="max-w-[400px] m-auto p-4 bg-gray-100 rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
-      
+
       {error && <div className="text-red-500 mb-4">{error}</div>}
       {success && <div className="text-green-500 mb-4">{success}</div>}
 
